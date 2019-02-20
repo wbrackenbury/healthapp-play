@@ -1,0 +1,10 @@
+#Main pages
+GET     /                           controllers.HomeController.index
+GET     /submit_form                controllers.HomeController.submit_form
+GET     /newest                	    controllers.HomeController.newest
+GET     /catalogue		    controllers.HomeController.catalogue
+GET     /contact		    controllers.HomeController.contact
+
+
+#Routes to insert into DB table
+POST    /insert/user                 controllers.HomeController.insert_user

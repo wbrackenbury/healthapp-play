@@ -1,0 +1,35 @@
+@(userForm: Form[controllers.UserForm.User], postUrl: Call)(implicit request: MessagesRequestHeader)
+
+@import helper.CSRF
+
+@head {
+
+
+<section id="content">
+
+  <div class="container" style="width: 100%; padding-top: 10px;">
+
+    Welcome to HealthApp! Sign up below.
+
+  </div>
+  
+  <div style="padding: 25px;">
+  
+    @helper.form(postUrl) {
+
+    @CSRF.formField
+    
+    @helper.inputText(userForm("Username"))
+    @helper.inputPassword(userForm("Password"))
+      
+    <button> Register </button>
+    }
+    
+
+    </div>
+
+  
+</section>
+}
+
+  
